@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality by Name</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Stylish&family=Teko:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<section>
+    <h1 class="heading"> What does your name says about your Personality ?</h1>
+    <div class="centerDiv">
+        <div class="details">
+        <label>Enter Your Name</label><br>
+        <input type="text" class="nameid"><br>
+        </div>
+        <img src="img.png" alt="" class="imgchange"><br>
+        <button>Click Me</button>
+    </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $('button').click(function(){
+            const name = $('.nameid').val();
+            if(name != "") {
+                $('.imgchange').attr('src',`https://joeschmoe.io/api/v1/${name}`);
+                const b = $('.imgchange');
+                console.log(b);
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
